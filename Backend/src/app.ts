@@ -46,5 +46,11 @@ export class SweetShop {
         return finalSweet;
     }
 
+    //Feature to delete sweets from the shop
+    deleteSweet(name : string) {
+       
+    }
+
+
 
 }

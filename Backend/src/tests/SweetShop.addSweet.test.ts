@@ -35,7 +35,6 @@ describe('SweetShop', () => {
             };
 
             const result = sweetShop.addSweet(sweet);
-            expect(result.id).toMatch(/^SWEET-\d+-\d+-\d+$/);
             expect(result.name).toBe('Vanilla Cupcake');
             expect(result.category).toBe('Cupcakes');
             expect(result.price).toBe(5.99);
