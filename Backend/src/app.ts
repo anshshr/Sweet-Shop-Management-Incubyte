@@ -64,7 +64,12 @@ export class SweetShop {
         return true;
     }
 
+    //view all the sweets in the shop
+    viewSweets() : Sweet[]{
+        return this.sweets;
+    }
 
+    
 
 
 
