@@ -15,19 +15,19 @@ describe("SweetShop - searchByName", () => {
         };
     });
 
-    test("should find sweet with exact name", () => {
+    test("should find sweet with exact name match", () => {
         sweetShop.addSweet(sweet);
         const result = sweetShop.searchByName("Chocolate Barfi");
         expect(result).toEqual(sweet);
     });
 
-    test("should find sweet without case search", () => {
+    test("should find sweet with case-insensitive search", () => {
         sweetShop.addSweet(sweet);
         const result = sweetShop.searchByName("CHOCOLATE BARFI");
         expect(result).toEqual(sweet);
     });
 
-    test("should find sweet with mixed form search", () => {
+    test("should find sweet with mixed case search", () => {
         sweetShop.addSweet(sweet);
         const result = sweetShop.searchByName("ChOcOlAtE bArFi");
         expect(result).toEqual(sweet);
