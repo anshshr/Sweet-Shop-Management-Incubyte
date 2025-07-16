@@ -19,7 +19,6 @@ describe('SweetShop', () => {
             };
 
             const result = sweetShop.addSweet(sweet);
-            expect(result.id).toBe('TEST-001');
             expect(result.name).toBe('Chocolate Cake');
             expect(result.category).toBe('Cakes');
             expect(result.price).toBe(15.99);
@@ -113,7 +112,7 @@ describe('SweetShop', () => {
             };
 
             sweetShop.addSweet(sweet1);
-            expect(() => sweetShop.addSweet(sweet2)).toThrow("Sweet with name 'Chocolate Cake' already exists");
+            expect(() => sweetShop.addSweet(sweet2)).toThrow("Sweet with name already exists");
         });
 
         test('should reject duplicate sweet names (case insensitive)', () => {

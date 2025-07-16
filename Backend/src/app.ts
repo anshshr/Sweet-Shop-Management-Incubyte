@@ -27,7 +27,7 @@ export class SweetShop {
         // Check if sweet with same name already exists
         const exists = this.sweets.find(s => s.name.toLowerCase() === sweet.name.trim().toLowerCase());
         if (exists) {
-            throw new Error(`Sweet with name '${sweet.name.trim()}' already exists`);
+            throw new Error(`Sweet with name already exists`);
         }
 
         let finalId: string;
@@ -65,12 +65,12 @@ export class SweetShop {
     }
 
     //view all the sweets in the shop
-    viewSweets() : Sweet[]{
+    viewSweets(): Sweet[] {
         return this.sweets;
     }
 
-    
-
-
-
+    // to search the sweets by name
+    searchByName(name: string) {
+       
+    }
 }
