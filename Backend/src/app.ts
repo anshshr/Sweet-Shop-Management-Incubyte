@@ -47,9 +47,24 @@ export class SweetShop {
     }
 
     //Feature to delete sweets from the shop
-    deleteSweet(name : string) {
-       
+    deleteSweet(name: string): boolean {
+        if (!name || name.trim() === '') {
+            return false;
+        }
+
+        const indexToDelete = this.sweets.findIndex(s =>
+            s.name.toLowerCase() === name.trim().toLowerCase()
+        );
+
+        if (indexToDelete === -1) {
+            return false;
+        }
+
+        this.sweets.splice(indexToDelete, 1);
+        return true;
     }
+
+
 
 
 
