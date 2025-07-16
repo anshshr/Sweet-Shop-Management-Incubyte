@@ -117,5 +117,24 @@ describe('SweetShop', () => {
             expect(() => sweetShop.addSweet(sweet2)).toThrow("Sweet with name 'Chocolate Cake' already exists");
         });
 
+        test('should reject duplicate sweet names (case insensitive)', () => {
+            const sweet1: Sweet = {
+                name: 'Vanilla Cupcake',
+                category: 'Cupcakes',
+                price: 5.99,
+                quantity: 10
+            };
+
+            const sweet2: Sweet = {
+                name: 'VANILLA CUPCAKE', // Same name but different case
+                category: 'Cakes',
+                price: 6.99,
+                quantity: 8
+            };
+
+            sweetShop.addSweet(sweet1);
+            expect(() => sweetShop.addSweet(sweet2)).toThrow("Sweet with name already exists");
+        });
+
     });
 });
