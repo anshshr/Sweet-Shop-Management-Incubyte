@@ -96,8 +96,17 @@ export class SweetShop {
 
 
     // search by price range
-     searchByPriceRange(minPrice: number, maxPrice: number) {
-       
+     searchByPriceRange(minPrice: number, maxPrice: number): Sweet[] {
+        if (minPrice < 0 || maxPrice < 0) {
+            throw new Error('Price range cannot contain negative values');
+        }
+        if (minPrice > maxPrice) {
+            throw new Error('Minimum price cannot be greater than maximum price');
+        }
+
+        return this.sweets.filter(s =>
+            s.price >= minPrice && s.price <= maxPrice
+        );
     }
 
 
