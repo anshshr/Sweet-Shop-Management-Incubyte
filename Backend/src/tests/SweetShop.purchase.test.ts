@@ -46,4 +46,9 @@ describe("Sweetshop - purchaseSweet", () => {
         expect(() => sweetShop.purchaseSweet('', 40)).toThrow('Sweet name cannot be empty')
     })
 
+    test("should be able to purchase sweet with mixed case name", () => {
+        const result = sweetShop.purchaseSweet(" bArFi" , 10); 
+        expect(result).toBe(true);
+    });
+
 })

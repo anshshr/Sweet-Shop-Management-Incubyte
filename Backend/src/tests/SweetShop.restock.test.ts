@@ -51,7 +51,13 @@ describe("Sweetshop - restockSweet", () => {
     test("should correctly increase the quantity of the sweet after restocking", () => {
         sweetShop.restockSweet("Barfi", 10);
         const updatedSweet = sweetShop.searchByName("Barfi");
-        expect(updatedSweet.quantity).toBe(25); 
+        expect(updatedSweet.quantity).toBe(25);
+    });
+
+    test("should restock sweet with mixed case name", () => {
+        const result = sweetShop.restockSweet(" bArFi" , 20) ;
+        const updatedSweet = sweetShop.searchByName("bArFi");
+        expect(updatedSweet.quantity).toBe(35) 
     });
 
 });
