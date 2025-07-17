@@ -134,8 +134,24 @@ export class SweetShop {
         return true;
     }
 
-    //feature to restock sweets (increase quantity)
-    restockSweet(name: string, quantity: number) {
+     //feature to restock sweets (increase quantity)
+    restockSweet(name: string, quantity: number): boolean {
+        const sweetName = name.trim().toLowerCase();
+
+        if (!sweetName || sweetName.trim() === '') {
+            throw new Error('Sweet name cannot be empty');
+        }
+        if (quantity <= 0) {
+            throw new Error('Restock quantity must be positive');
+        }
+
+        const sweet = this.sweets.find(s => s.name.toLowerCase() === sweetName);
+        if (!sweet) {
+            return false;
+        }
+
+        sweet.quantity += quantity;
+        return true;
     }
 
 
