@@ -110,8 +110,28 @@ export class SweetShop {
     }
 
     //feature to purchase sweets (reduce quantity)
-    purchaseSweet(name: string, quantity: number) {
+    purchaseSweet(name: string, quantity: number): boolean {
 
+        const sweetName = name.trim().toLowerCase();
+        if (!sweetName || sweetName === '') {
+            throw new Error('Sweet name cannot be empty');
+        }
+        if (quantity <= 0) {
+            throw new Error('Purchase quantity must be positive');
+        }
+
+
+        const sweet = this.sweets.find(s => s.name.toLowerCase() === sweetName);
+        if (!sweet) {
+            return false;
+        }
+
+        if (sweet.quantity < quantity) {
+            throw new Error('Insufficient stock available');
+        }
+
+        sweet.quantity -= quantity;
+        return true;
     }
 
 
