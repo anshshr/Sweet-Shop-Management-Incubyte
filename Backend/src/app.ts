@@ -134,5 +134,10 @@ export class SweetShop {
         return true;
     }
 
+    //feature to restock sweets (increase quantity)
+    restockSweet(name: string, quantity: number) {
+    }
+
+
 
 }
