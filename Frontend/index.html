@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sweet Shop Manager</h1>
+
+        <div class="grid">
+            <!-- Add Sweet Form -->
+            <div class="card">
+                <h3>Add Sweet</h3>
+                <form id="addForm">
+                    <div class="form-group">
+                        Name: <input type="text" id="addName" required>
+                    </div>
+                    <div class="form-group">
+                        Category:<input type="text" id="addCategory" required>
+                    </div>
+                    <div class="two-column">
+                        <div class="form-group">
+                            Price:<input type="number" id="addPrice" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            Quantity:<input type="number" id="addQuantity" min="0" required>
+                        </div>
+                    </div>
+                    <button type="submit">Add Sweet</button>
+                </form>
+                <div id="addMessage"></div>
+            </div>
+
+            <!-- Delete Sweet Form -->
+            <div class="card">
+                <h3>Delete Sweet</h3>
+                <form id="deleteForm">
+                    <div class="form-group">
+                        Sweet Name:<input type="text" id="deleteName" required>
+                    </div>
+                    <button type="submit">Delete Sweet</button>
+                </form>
+                <div id="deleteMessage"></div>
+            </div>
+
+            <!-- Search by Name Form-->
+            <div class="card">
+                <h3>Search by Name</h3>
+                <form id="searchForm">
+                    <div class="form-group">
+                        Sweet Name:<input type="text" id="searchName" required>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+                <div id="searchMessage"></div>
+            </div>
+
+            <!-- Search by Category Form-->
+            <div class="card">
+                <h3>Search by Category</h3>
+                <form id="categoryForm">
+                    <div class="form-group">
+                        Category:<input type="text" id="searchCategory" required>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+                <div id="categoryMessage"></div>
+            </div>
+
+            <!-- Search by Price Range Form -->
+            <div class="card">
+                <h3>Search by Price Range</h3>
+                <form id="priceForm">
+                    <div class="two-column">
+                        <div class="form-group">
+                            Min Price:<input type="number" id="minPrice" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            Max Price:<input type="number" id="maxPrice" step="0.01" min="0" required>
+                        </div>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+                <div id="priceMessage"></div>
+            </div>
+
+            <!-- Purchase Sweet Form-->
+            <div class="card">
+                <h3>Purchase Sweet</h3>
+                <form id="purchaseForm">
+                    <div class="form-group">
+                        Sweet Name:<input type="text" id="purchaseName" required>
+                    </div>
+                    <div class="form-group">
+                        Quantity:<input type="number" id="purchaseQuantity" min="1" required>
+                    </div>
+                    <button type="submit">Purchase</button>
+                </form>
+                <div id="purchaseMessage"></div>
+            </div>
+
+            <!-- Restock Sweet Form-->
+            <div class="card">
+                <h3>Restock Sweet</h3>
+                <form id="restockForm">
+                    <div class="form-group">
+                        Sweet Name:<input type="text" id="restockName" required>
+                    </div>
+                    <div class="form-group">
+                        Quantity:<input type="number" id="restockQuantity" min="1" required>
+                    </div>
+                    <button type="submit">Restock</button>
+                </form>
+                <div id="restockMessage"></div>
+            </div>
+
+            <!-- View All Sweets Button-->
+            <div class="card">
+                <h3>View All Sweets</h3>
+                <button onclick="viewAllSweets()">Load All Sweets</button>
+                <div id="allSweetsMessage"></div>
+            </div>
+        </div>
+
+        <div class="sweets-display" id="sweetsDisplay" style="display: none;">
+            <h3>Sweets Results</h3>
+            <div id="sweetsContainer"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
