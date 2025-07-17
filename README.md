@@ -138,7 +138,7 @@ View detailed coverage report: Open [`Backend/coverage/index.html`](Backend/cove
 The frontend provides an intuitive card-based interface with forms for all sweet shop operations:
 
 ![Sweet Shop Main Interface](./assets/image1.jpg)
-
+### Sweets Added
 ![Add Sweet Form](./assets/image2.jpg)
 
 
