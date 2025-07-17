@@ -93,4 +93,12 @@ export class SweetShop {
         }
         return this.sweets.filter(s => s.category.toLowerCase().includes(searchTerm));
     }
+
+
+    // search by price range
+     searchByPriceRange(minPrice: number, maxPrice: number) {
+       
+    }
+
+
 }
