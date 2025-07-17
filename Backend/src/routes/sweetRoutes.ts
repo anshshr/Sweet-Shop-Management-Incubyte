@@ -69,7 +69,6 @@ router.post("/search", (req, res) => {
     try {
         const { name } = req.body;
         const sweet = sweetShop.searchByName(name);
-        console.log(sweet);
 
         res.status(200).json({
             sweet
