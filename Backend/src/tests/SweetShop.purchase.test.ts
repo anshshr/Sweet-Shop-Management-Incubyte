@@ -17,8 +17,6 @@ describe("Sweetshop - purchaseSweet", () => {
             quantity: 50
         };
 
-
-
         milkSweet = {
             name: "Barfi",
             category: "Milk-based",
@@ -28,7 +26,6 @@ describe("Sweetshop - purchaseSweet", () => {
 
         sweetShop.addSweet(cakeSweet);
         sweetShop.addSweet(milkSweet);
-
 
     });
 
@@ -41,12 +38,9 @@ describe("Sweetshop - purchaseSweet", () => {
         expect(() => sweetShop.purchaseSweet("Barfi", 100)).toThrow('Insufficient stock available')
     })
 
-
-
     test("should return false if trying to buy a sweet in neagtive or zero quantity", () => {
         expect(() => sweetShop.purchaseSweet("Barfi", -40)).toThrow('Purchase quantity must be positive')
     })
-
 
     test("should throw an error if trying to buy an sweet without any name", () => {
         expect(() => sweetShop.purchaseSweet('', 40)).toThrow('Sweet name cannot be empty')

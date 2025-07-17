@@ -11,7 +11,7 @@ describe("SweetShop - searchByName", () => {
         sweet = {
             name: "Chocolate Barfi",
             category: "milk-based",
-            price: 6,
+            price: 600,
             quantity: 10
         };
 

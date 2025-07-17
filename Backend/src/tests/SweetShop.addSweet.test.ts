@@ -14,14 +14,14 @@ describe('SweetShop', () => {
                 id: 'TEST-001',
                 name: 'Chocolate Cake',
                 category: 'Cakes',
-                price: 15.99,
+                price: 150,
                 quantity: 10
             };
 
             const result = sweetShop.addSweet(sweet);
             expect(result.name).toBe('Chocolate Cake');
             expect(result.category).toBe('Cakes');
-            expect(result.price).toBe(15.99);
+            expect(result.price).toBe(150);
             expect(result.quantity).toBe(10);
         });
 
@@ -29,7 +29,7 @@ describe('SweetShop', () => {
             const sweet: Sweet = {
                 name: '',
                 category: 'Cookies',
-                price: 3.99,
+                price: 300,
                 quantity: 5
             };
 
@@ -40,7 +40,7 @@ describe('SweetShop', () => {
             const sweet: Sweet = {
                 name: 'Sugar Cookie',
                 category: '',
-                price: 3.99,
+                price: 300,
                 quantity: 5
             };
 
@@ -51,7 +51,7 @@ describe('SweetShop', () => {
             const sweet: Sweet = {
                 name: 'Sugar Cookie',
                 category: 'Cookies',
-                price: -1.99,
+                price: -190,
                 quantity: 5
             };
 
@@ -62,7 +62,7 @@ describe('SweetShop', () => {
             const sweet: Sweet = {
                 name: 'Brownie',
                 category: 'Cakes',
-                price: 8.99,
+                price: 500,
                 quantity: -5
             };
 
@@ -73,7 +73,7 @@ describe('SweetShop', () => {
             const sweet: Sweet = {
             name: 'Out of Stock Item',
             category: 'Cakes',
-            price: 12.99,
+            price: 120,
             quantity: 0
             };
 
@@ -85,14 +85,14 @@ describe('SweetShop', () => {
             const sweet1: Sweet = {
                 name: 'Chocolate Cake',
                 category: 'Cakes',
-                price: 10.99,
+                price: 100,
                 quantity: 5
             };
 
             const sweet2: Sweet = {
                 name: 'Chocolate Cake', 
                 category: 'Desserts', 
-                price: 8.99,
+                price: 800,
                 quantity: 3
             };
 
@@ -104,14 +104,14 @@ describe('SweetShop', () => {
             const sweet1: Sweet = {
                 name: 'Vanilla Cupcake',
                 category: 'Cupcakes',
-                price: 5.99,
+                price: 590,
                 quantity: 10
             };
 
             const sweet2: Sweet = {
                 name: 'VANILLA CUPCAKE', // Same name but different case
                 category: 'Cakes',
-                price: 6.99,
+                price: 650,
                 quantity: 8
             };
 

@@ -18,8 +18,6 @@ describe("Sweetshop - restockSweet", () => {
             quantity: 50
         };
 
-
-
         milkSweet = {
             name: "Barfi",
             category: "Milk-based",
@@ -35,7 +33,6 @@ describe("Sweetshop - restockSweet", () => {
         const result = sweetShop.restockSweet('Barfi', 20)
         expect(result).toBe(true);
     })
-
 
     test("should return false when trying to restock a sweet that do not exist", () => {
         const result = sweetShop.restockSweet('KajuKatli', 20)

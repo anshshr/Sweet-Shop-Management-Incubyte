@@ -14,28 +14,28 @@ describe("SweetShop - searchByCategory", () => {
         cakeSweet = {
             name: "Chocolate Cake",
             category: "Cakes",
-            price: 15,
+            price: 150,
             quantity: 5
         };
 
         chocolateSweet = {
             name: "Dark Chocolate Bar",
             category: "Chocolates",
-            price: 8.99,
+            price: 850,
             quantity: 20
         };
 
         milkSweet = {
             name: "Barfi",
             category: "Milk-based",
-            price: 12.50,
+            price: 120,
             quantity: 15
         };
 
         candySweet = {
             name: "Gummy Bears",
             category: "Candies",
-            price: 4.99,
+            price: 490,
             quantity: 30
         };
 

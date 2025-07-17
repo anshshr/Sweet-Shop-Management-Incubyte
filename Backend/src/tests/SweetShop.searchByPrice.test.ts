@@ -63,18 +63,18 @@ describe("SweetShop - searchByPriceRange", () => {
     });
 
     test("should throw error when minimum price or maximum price or both is negative", () => {
-        expect(() => sweetShop.searchByPriceRange(-5.00, 10.00))
+        expect(() => sweetShop.searchByPriceRange(-5, 10))
             .toThrow("Price range cannot contain negative values");
 
-        expect(() => sweetShop.searchByPriceRange(5.00, -10.00))
+        expect(() => sweetShop.searchByPriceRange(5, -10))
             .toThrow("Price range cannot contain negative values");
 
-        expect(() => sweetShop.searchByPriceRange(-5.00, -2.00))
+        expect(() => sweetShop.searchByPriceRange(-5, -2))
             .toThrow("Price range cannot contain negative values");
     });
 
     test("should throw error when minimum price is greater than maximum price", () => {
-        expect(() => sweetShop.searchByPriceRange(15.00, 10.00))
+        expect(() => sweetShop.searchByPriceRange(15, 10))
             .toThrow("Minimum price cannot be greater than maximum price");
     });
 });

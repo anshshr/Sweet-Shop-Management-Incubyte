@@ -13,7 +13,7 @@ describe('SweetShop - deleteSweet', () => {
         sweetShop.addSweet({
             name: "Barfi",
             category: "milk-based",
-            price: 5.99,
+            price: 50,
             quantity: 10
         });
 
@@ -35,7 +35,7 @@ describe('SweetShop - deleteSweet', () => {
         sweetShop.addSweet({
             name: "barfi",
             category: "milk-based",
-            price: 5.99,
+            price: 500,
             quantity: 10
         });
 
