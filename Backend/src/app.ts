@@ -86,6 +86,11 @@ export class SweetShop {
     }
 
     // search a name by category
-    searchByCategory(category: string) {
+    searchByCategory(category: string): Sweet[] {
+        const searchTerm = category?.trim().toLowerCase();
+        if (!searchTerm) {
+            throw new Error('Search category cannot be empty');
+        }
+        return this.sweets.filter(s => s.category.toLowerCase().includes(searchTerm));
     }
 }
