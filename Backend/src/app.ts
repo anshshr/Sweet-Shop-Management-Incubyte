@@ -70,7 +70,22 @@ export class SweetShop {
     }
 
     // to search the sweets by name
-    searchByName(name: string) {
-       
+    searchByName(name: string): Sweet {
+        if (!name || name.trim() === "") {
+            throw new Error("Search name cannot be empty");
+        }
+
+        const searchName = name.trim().toLowerCase();
+        const sweet = this.sweets.find(s => s.name.toLowerCase() === searchName);
+
+        if (!sweet) {
+            throw new Error(`Sweet with name '${name.trim()}' not found`);
+        }
+
+        return sweet;
+    }
+
+    // search a name by category
+    searchByCategory(category: string) {
     }
 }
