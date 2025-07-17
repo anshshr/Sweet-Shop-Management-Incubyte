@@ -29,8 +29,6 @@ describe("Sweetshop - restockSweet", () => {
 
         sweetShop.addSweet(cakeSweet);
         sweetShop.addSweet(milkSweet);
-
-
     });
 
     test("should return true when sweet is successfully restocked", () => {

@@ -5,7 +5,7 @@ import { Sweet } from "../types/Sweet";
 describe("SweetShop - searchByName", () => {
     let sweetShop: SweetShop;
     let sweet: Sweet;
-    
+
     beforeEach(() => {
         sweetShop = new SweetShop();
         sweet = {
@@ -14,26 +14,28 @@ describe("SweetShop - searchByName", () => {
             price: 6,
             quantity: 10
         };
+
+        sweetShop.addSweet(sweet);
     });
 
     test("should find sweet with exact name", () => {
-        sweetShop.addSweet(sweet);
+
         const result = sweetShop.searchByName("Chocolate Barfi");
         expect(result).toMatchObject(sweet);
     });
 
     test("should find sweet case-insensitive search", () => {
-        sweetShop.addSweet(sweet);
+
         const result = sweetShop.searchByName("CHOCOLATE BARFI");
         expect(result).toMatchObject(sweet);
     });
 
     test("should find sweet with mixed case  search", () => {
-        sweetShop.addSweet(sweet);
+
         const result = sweetShop.searchByName("ChOcOlAtE bArFi");
         expect(result).toMatchObject(sweet);
     });
-   
+
     test("should throw an error when a sweet is not found", () => {
         expect(() => sweetShop.searchByName('KajuKatli')).toThrow("Sweet with name 'KajuKatli' not found");
     });

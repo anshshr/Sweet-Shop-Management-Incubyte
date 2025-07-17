@@ -25,21 +25,6 @@ describe('SweetShop', () => {
             expect(result.quantity).toBe(10);
         });
 
-        test('should add sweet with auto-generated ID', () => {
-            const sweet: Sweet = {
-                name: 'Vanilla Cupcake',
-                category: 'Cupcakes',
-                price: 5.99,
-                quantity: 20
-            };
-
-            const result = sweetShop.addSweet(sweet);
-            expect(result.name).toBe('Vanilla Cupcake');
-            expect(result.category).toBe('Cupcakes');
-            expect(result.price).toBe(5.99);
-            expect(result.quantity).toBe(20);
-        });
-
         test('should reject invalid sweet name', () => {
             const sweet: Sweet = {
                 name: '',

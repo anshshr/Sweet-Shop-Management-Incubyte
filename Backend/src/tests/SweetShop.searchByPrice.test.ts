@@ -38,13 +38,14 @@ describe("SweetShop - searchByPriceRange", () => {
             price: 400,
             quantity: 5
         };
-    });
 
-    test("should find sweets within exact price range", () => {
         sweetShop.addSweet(cheapSweet);
         sweetShop.addSweet(moderateSweet);
         sweetShop.addSweet(expensiveSweet);
         sweetShop.addSweet(premiumSweet);
+    });
+
+    test("should find sweets within exact price range", () => {
 
         const result = sweetShop.searchByPriceRange(200, 500);
 
@@ -54,8 +55,6 @@ describe("SweetShop - searchByPriceRange", () => {
     });
 
     test("should return empty array when no sweets in price range", () => {
-        sweetShop.addSweet(cheapSweet);
-        sweetShop.addSweet(premiumSweet);
 
         const result = sweetShop.searchByPriceRange(10, 40);
 

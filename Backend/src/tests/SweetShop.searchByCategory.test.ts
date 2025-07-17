@@ -38,11 +38,14 @@ describe("SweetShop - searchByCategory", () => {
             price: 4.99,
             quantity: 30
         };
+
+        sweetShop.addSweet(cakeSweet);
+        sweetShop.addSweet(chocolateSweet);
+        sweetShop.addSweet(milkSweet);
+        sweetShop.addSweet(candySweet);
     });
 
     test("should find sweets with exact category match", () => {
-        sweetShop.addSweet(cakeSweet);
-        sweetShop.addSweet(chocolateSweet);
 
         const result = sweetShop.searchByCategory("Cakes");
 
@@ -52,8 +55,7 @@ describe("SweetShop - searchByCategory", () => {
     });
 
     test("should find sweets with case-insensitive category search", () => {
-        sweetShop.addSweet(cakeSweet);
-        sweetShop.addSweet(chocolateSweet);
+
 
         const result = sweetShop.searchByCategory("CAKES");
 
@@ -62,7 +64,6 @@ describe("SweetShop - searchByCategory", () => {
     });
 
     test("should find sweets with mixed case category search", () => {
-        sweetShop.addSweet(milkSweet);
 
         const result = sweetShop.searchByCategory("MiLk-BaSeD");
 
@@ -75,7 +76,6 @@ describe("SweetShop - searchByCategory", () => {
     });
 
     test("should handle category search with extra whitespace", () => {
-        sweetShop.addSweet(cakeSweet);
 
         const result = sweetShop.searchByCategory("  Cakes  ");
 
